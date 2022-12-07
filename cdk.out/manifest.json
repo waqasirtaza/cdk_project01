@@ -1,0 +1,142 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "FirstCdkAppStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "FirstCdkAppStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "FirstCdkAppStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "FirstCdkAppStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d18da13a568fb06151f6b4fbfd89e20944b03d3f36bf87383abf56ed777245ea.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "FirstCdkAppStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "FirstCdkAppStack.assets"
+      ],
+      "metadata": {
+        "/FirstCdkAppStack/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableCD117FA1"
+          }
+        ],
+        "/FirstCdkAppStack/function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "functionServiceRoleEF216095"
+          }
+        ],
+        "/FirstCdkAppStack/function/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "functionServiceRoleDefaultPolicy5ACF569A"
+          }
+        ],
+        "/FirstCdkAppStack/function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "functionF19B1A04"
+          }
+        ],
+        "/FirstCdkAppStack/RestAPI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestAPI1CC12F26"
+          }
+        ],
+        "/FirstCdkAppStack/RestAPI/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestAPIDeploymentD35A53809835644786d37ee78e9308d21575593b"
+          }
+        ],
+        "/FirstCdkAppStack/RestAPI/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestAPIDeploymentStageprod21CF62B9"
+          }
+        ],
+        "/FirstCdkAppStack/RestAPI/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestAPIEndpointB14C3C54"
+          }
+        ],
+        "/FirstCdkAppStack/RestAPI/Default/scan/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestAPIscan1A3AD8EE"
+          }
+        ],
+        "/FirstCdkAppStack/RestAPI/Default/scan/GET/ApiPermission.FirstCdkAppStackRestAPI45CA71C0.GET..scan": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestAPIscanGETApiPermissionFirstCdkAppStackRestAPI45CA71C0GETscanDF0A85FB"
+          }
+        ],
+        "/FirstCdkAppStack/RestAPI/Default/scan/GET/ApiPermission.Test.FirstCdkAppStackRestAPI45CA71C0.GET..scan": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestAPIscanGETApiPermissionTestFirstCdkAppStackRestAPI45CA71C0GETscan53764918"
+          }
+        ],
+        "/FirstCdkAppStack/RestAPI/Default/scan/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestAPIscanGETA246BC27"
+          }
+        ],
+        "/FirstCdkAppStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/FirstCdkAppStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/FirstCdkAppStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/FirstCdkAppStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "FirstCdkAppStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
